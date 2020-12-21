@@ -1,0 +1,108 @@
+@media only screen and (min-width: 768px) {
+  .m_description_container {
+    max-width: 100%;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #f1f1f1;
+    .section_left {
+      width: 70%;
+      background-color: white;
+      padding: 15px;
+      .top_des {
+        span {
+          display: inline-block;
+          margin-right: 15px;
+          margin-bottom: 3px;
+          font-size: 14px;
+          font-family: NotoSans-Bold, Arial, sans-serif;
+          color: black;
+          font-weight: bold;
+        }
+      }
+      .m_des_content {
+        margin-top: 2%;
+        p {
+          font-size: 16px;
+          font-family: NotoSans-Bold, Arial, sans-serif;
+          color: black;
+          line-height: 1.3em;
+        }
+      }
+      .m_des_footer {
+        margin-top: 3%;
+        p {
+          margin-bottom: 3px;
+          font-size: 16px;
+          font-family: NotoSans-Bold, Arial, sans-serif;
+          color: black;
+          font-weight: bold;
+        }
+        .footer_feature_header {
+          width: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 10px;
+          p {
+            margin-bottom: 3px;
+            font-size: 16px;
+            font-family: NotoSans-Bold, Arial, sans-serif;
+            color: black;
+            font-weight: bold;
+          }
+        }
+
+        .footer_feature {
+          width: 40%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 10px;
+          p {
+            margin-bottom: 3px;
+            font-size: 16px;
+            font-family: NotoSans-Bold, Arial, sans-serif;
+            color: #737373;
+          }
+        }
+      }
+
+      .img_carousal_container {
+        margin-top: 4%;
+        h5 {
+          margin-bottom: 3px;
+          font-size: 18px;
+          font-family: NotoSans-Bold, Arial, sans-serif;
+          color: black;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+        .img_carousal {
+          min-width: 100%;
+          display: flex;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .car_item {
+            margin-right: 20px;
+            width: 120px;
+            p {
+              font-size: 12px;
+              font-family: NotoSans-Bold, Arial, sans-serif;
+              color: black;
+            }
+            img {
+              width: 120px;
+              height: 140px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}

@@ -1,0 +1,95 @@
+@media only screen and (min-width: 768px) {
+  .movie_detail_header_container {
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(transparent, #0000005e),
+      url("https://images-3.wuaki.tv/system/shots/195770/original/snapshot-1590664765-width1920-quality80.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .header_content_container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      .round_btns_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .round_btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          button {
+            width: 110px;
+            height: 110px;
+            display: flex;
+            margin-bottom: 10px;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            border: none;
+            margin: 15px 20px 15px 20px;
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          p {
+            display: block;
+            color: white;
+            font-family: NotoSans-Bold, Arial, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+            line-height: 130%;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .title_container {
+        margin-top: 10%;
+        margin-bottom: 2%;
+        h1 {
+          color: white;
+          font-family: NotoSans-Bold, Arial, sans-serif;
+          font-size: 42px;
+        }
+      }
+      .btn_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        button {
+          color: #252525;
+          background-color: #ffe300;
+          width: 30%;
+          height: 45px;
+          border: none;
+          cursor: pointer;
+          display: block;
+          font-family: NotoSans-Bold, Arial, sans-serif;
+          text-align: center;
+          text-transform: uppercase;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+          line-height: 130%;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}

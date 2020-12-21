@@ -1,0 +1,121 @@
+$bg-color: #000;
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #333;
+  border-right: none;
+  background-color: #333;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #999;
+}
+.ayuda {
+  display: flex;
+  position: absolute;
+  right: 0;
+  flex-wrap: wrap;
+}
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #333;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 100%;
+}
+.register{
+  background: #ffe300;
+  color: black !important;
+  margin: 0 10px;
+}
+nav {
+  background-color: $bg-color;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+ 
+  z-index: 2;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  h2,h3,a {
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    margin: 0;
+    font-size: 1.45em;
+  }
+
+  .main-nav {
+    margin-top: 5px;
+  }
+  .logo a,
+  .main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+  }
+
+  .main-nav a {
+    color: #fff;
+    font-size: 0.99em;
+  }
+
+  .main-nav a:hover {
+    color: #fff;
+  }
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (max-width:1024px){
+  .ayuda{
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .main-nav {
+    display: flex;
+  }
+  
+  .main-nav img {
+    width: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+}
