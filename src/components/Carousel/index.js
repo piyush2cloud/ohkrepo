@@ -1,34 +1,7 @@
 import React,{Component} from "react"
 import "./style.scss";
-import {LeftArrow,RightArrow} from "./icons"
-class CarouselLeftArrow extends Component {
-    render() {
-      return (
-        <a
-          href="#"
-          className="carousel__arrow carousel__arrow--left"
-          onClick={this.props.onClick}
-        >
-          <LeftArrow/>
-        </a>
-      );
-    }
-  }
-  
-  class CarouselRightArrow extends Component {
-    render() {
-      return (
-        <a
-          href="#"
-          className="carousel__arrow carousel__arrow--right"
-          onClick={this.props.onClick}
-        >
-          <RightArrow/>
-        </a>
-      );
-    }
-  }
-  class CarouselIndicator extends Component {
+
+class CarouselIndicator extends Component {
     render() {
       return (
         <li>
@@ -55,12 +28,8 @@ class CarouselLeftArrow extends Component {
           }
         >
           <p className="carousel-slide__content">
-              
               <img style={{width: "100%"}} src={this.props.slide.urlToImage}/>
-              
              </p>
-  
-        
         </li>
       );
     }
@@ -123,7 +92,6 @@ class CarouselLeftArrow extends Component {
     render() {
       return (
         <div className="carousel">
-          <CarouselLeftArrow onClick={e => this.goToPrevSlide(e)} />
   
           <ul className="carousel__slides">
             {this.props.slides && this.props.slides.map((slide, index) =>
@@ -135,8 +103,6 @@ class CarouselLeftArrow extends Component {
               />
             )}
           </ul>
-  
-          <CarouselRightArrow onClick={e => this.goToNextSlide(e)} />
   
           <ul className="carousel__indicators">
             {this.props.slides && this.props.slides.map((slide, index) =>

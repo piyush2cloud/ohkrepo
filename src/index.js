@@ -16,7 +16,7 @@ const App = () => {
       <HeaderNav></HeaderNav>
       <BrowserRouter>
         <Route exact path="/" component={HomeContainer} />
-        <Route exact path="/movie-detail" component={MovieDetailContainer} />
+        <Route exact path="/movie-detail/:id" component={MovieDetailContainer} />
       </BrowserRouter>
     </Provider>
   );

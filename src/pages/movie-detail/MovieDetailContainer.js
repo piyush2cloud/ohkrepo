@@ -8,7 +8,7 @@ import VideoContainer from "../Video/VideoContainer"
 
 class MovieDetailContainer extends Component {
   componentDidMount() {
-    const id = "movieId";
+    let id = this.props.match && this.props.match.params && this.props.match.params.id;
     this.props.fetchMovieDetail(id);
   }
 

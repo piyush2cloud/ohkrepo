@@ -48,8 +48,6 @@ class MovieIntroSlider extends Component {
     if(!this.state.movieList){
       return(<div>Loading</div>)
     }
-
-    debugger
     const {data} = this.state.movieList;
 
     const moviesList = data && data.contents;
@@ -59,7 +57,7 @@ class MovieIntroSlider extends Component {
       moviesList.data &&
       moviesList.data.map((movie, idx) => {
         const { images } = movie;
-        return <ImageSlider className="thumb-box" key={idx} url={images.artwork} />;
+        return <ImageSlider className="thumb-box" key={idx} vid={movie.id} url={images.artwork} />;
       });
 
     return movieImageSlider ? (

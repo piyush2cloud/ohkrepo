@@ -5,7 +5,7 @@ import ActionTypes from '../../../constants/action-types';
  * Function to fetch the movie detail based on id
  */
 export const fetchMovieDetail = (movieId) => {
-  const endpoint = `${config.VID_ENDPOINT}`;
+  const endpoint = `${config.VID_ENDPOINT}/${movieId}?classification_id=5&device_identifier=web& locale=es&market_code=es`;
   return (dispatch) => {
     dispatch(fetchMovie());
     fetch(`${endpoint}`)

@@ -2,13 +2,13 @@ import React, { Fragment, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./image-slider.scss";
 
-const ImageSlider = ({ url }) => {
+const ImageSlider = ({ url, vid }) => {
   const history = useHistory();
   const handleClick = () => {
-    history.push(`/movie-detail`);
+    history.push(`/movie-detail/${vid}`);
   };
-const[description,setDescription]=useState(false);
-const [delayHandler, setDelayHandler] = useState(null);
+  const[description,setDescription]=useState(false);
+  const [delayHandler, setDelayHandler] = useState(null);
 
 const handleMouseEnter = event => {
     setDelayHandler(setTimeout(() => {
@@ -23,7 +23,6 @@ const handleMouseLeave = () => {
   return (
     <Fragment>
       <a href="#" className="item-container">
-       
           <div className="movie-thumbnail" id={url} onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave} >
             {url ? <img
               src={url}
