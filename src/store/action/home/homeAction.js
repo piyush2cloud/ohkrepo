@@ -5,7 +5,7 @@ import ActionTypes from '../../../constants/action-types';
  * Function to fetch the  list of movies and transform it to array for displaying
  */
 export const fetchMoviesList = (categoryId) => {
-  const endpoint = `${config.API_ENDPOINT}`;
+  const endpoint = `${config.API_ENDPOINT}/${categoryId}?classification_id=5&device_identifier=web&locale=es&market_code=es`;
   return (dispatch) => {
     dispatch(getMovies());
     fetch(`${endpoint}`)

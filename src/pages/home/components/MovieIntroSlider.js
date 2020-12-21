@@ -7,13 +7,32 @@ import ImageSlider from "../../../components/image-slider/ImageSlider";
 import { fetchMoviesList } from "../../../store/action/home/homeAction";
 import right from "../../../Assets/right-arrow.svg"
 import left from "../../../Assets/left-arrow.svg"
+import { config } from "../../../constants";
 
 
 class MovieIntroSlider extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      movieList: null
+    }
+    this.handleScrollToElement = this.handleScrollToElement.bind(this);
+  }
+
   componentDidMount() {
     const { categoryId } = this.props;
-    this.props.fetchMoviesList(categoryId);
-    this.handleScrollToElement = this.handleScrollToElement.bind(this);
+    // this.props.fetchMoviesList(categoryId);
+    const endpoint = `${config.API_ENDPOINT}/${categoryId}?classification_id=5&device_identifier=web&locale=es&market_code=es`;
+    fetch(`${endpoint}`)
+      .then((movieListResponse) => movieListResponse.json())
+      .then((data) => {
+        this.setState(()=> ({
+          movieList:data
+        }))
+      })
+      .catch((moviesListError) => {
+        console.log(moviesListError)
+      });
   }
 
   handleScrollToElement(isLeft) {
@@ -25,9 +44,14 @@ class MovieIntroSlider extends Component {
   }
 
   render() {
-    const {
-      movies: { data },
-    } = this.props;
+
+    if(!this.state.movieList){
+      return(<div>Loading</div>)
+    }
+
+    debugger
+    const {data} = this.state.movieList;
+
     const moviesList = data && data.contents;
     
     const movieImageSlider =

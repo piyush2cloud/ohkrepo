@@ -13,7 +13,6 @@ const HomeContainer = () => {
       <HeaderNav />
       <Carousel slides={carouselSlidesData} />
       <div className="home-container">
-
         {categoryIds &&
           categoryIds.map((categoryId, idx) => {
             return <MovieIntroSlider key={idx} categoryId={categoryId} />;
